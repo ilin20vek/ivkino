@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Олег Нуриханович: Как санаторию, который лечит с 1972 года, получать гостей из коротких роликов, а не только из рекламы</title>
+<meta name="description" content="Лично Олегу Нурихановичу. Игорь Ильин, «Бизнес по-русски»">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="Олег Нуриханович, как санаторию, который лечит с 1972 года, получать гостей из коротких роликов, а не только из рекламы">
+<meta property="og:description" content="Лично Олегу Нурихановичу. Игорь Ильин, «Бизнес по-русски»">
+<meta property="og:url" content="https://ilin20vek.github.io/ivkino/">
+<meta property="og:image" content="https://ilin20vek.github.io/ivkino/i/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+@font-face{font-family:'Sofia Sans';src:url(fonts/sofia-sans-400.woff2) format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Sofia Sans';src:url(fonts/sofia-sans-700.woff2) format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'SSEC';src:url(fonts/sofia-sans-extra-condensed-800.woff2) format('woff2');font-weight:800;font-display:swap}
+/* Цвета - под адресата (свод, п.7): взять с его сайта. Остальное не трогать. */
+:root{--fon:#0e1a13;--tekst:#f3f1ea;--soft:#b5c0b2;--akcent:#f2c230;--plashka:#16271d}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--fon);color:var(--tekst);font:400 19px/1.5 'Sofia Sans',system-ui,sans-serif}
+/* Свод п.17: основной текст не меньше 17 px, подписи не меньше 14 px. Мельче не делать. */
+.in{max-width:1080px;margin:0 auto;padding:0 24px}
+section{padding:64px 0}
+h1,h2{font-family:SSEC,'Sofia Sans',sans-serif;font-weight:800;line-height:1.02;margin:0 0 20px}
+h1{font-size:64px} h2{font-size:46px}
+.akc{color:var(--akcent)}
+.nom{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--soft);margin:0 0 12px}
+p{margin:0 0 16px;max-width:36em}
+.pod{font-size:15px;color:var(--soft)}
+
+/* Первый экран. Свод п.16: надпись не ложится на лицо ни на одной ширине.
+   Широкий экран: лицо справа, текст слева не шире 46vw. До 900 px: лицо сверху, текст под подбородком. */
+.e0{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+.e0 .lico{position:absolute;right:0;bottom:0;height:100%;width:auto;max-width:56vw;object-fit:cover;object-position:top center;
+  -webkit-mask-image:linear-gradient(to left,#000 60%,transparent);mask-image:linear-gradient(to left,#000 60%,transparent)}
+.e0 .in{position:relative;width:100%}
+.e0 .tekst{max-width:min(640px,46vw)}
+.emb{width:60px;height:60px;display:block;margin-bottom:28px}
+.obr{font-size:22px;color:var(--akcent);margin-bottom:10px}
+@media (max-width:900px){
+ .e0{display:block;min-height:0}
+ .e0 .lico{position:absolute;top:0;left:0;right:auto;bottom:auto;width:100%;max-width:none;height:auto;aspect-ratio:1/1;
+   -webkit-mask-image:linear-gradient(to bottom,#000 55%,transparent 96%);mask-image:linear-gradient(to bottom,#000 55%,transparent 96%)}
+ .e0 .in{padding-top:84vw;padding-bottom:40px}
+ .e0 .tekst{max-width:640px}
+ .emb{position:absolute;top:20px;left:20px;width:52px;height:52px;z-index:2;margin:0}
+}
+@media (max-width:640px){
+ body{font-size:17px}
+ h1{font-size:44px} h2{font-size:34px}
+ section{padding:44px 0}
+ .obr{font-size:19px}
+}
+
+/* Цена. Свод п.21: один раз, конкретно, полная зачёркнута рядом. */
+.cena{background:var(--plashka);border-radius:18px;padding:28px;margin:24px 0}
+.cena .ch{font-family:SSEC,sans-serif;font-weight:800;font-size:56px;line-height:1}
+.cena s{color:var(--soft);font-size:.6em;margin-right:12px}
+
+/* Ролики. Свод п.18: обложка у каждого, нажатие в любое место запускает. Только принятые ролики (п.19). */
+.roliki{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px}
+.roliki figure{margin:0}
+.roliki .rol{position:relative;cursor:pointer;border-radius:16px;overflow:hidden}
+.roliki video{display:block;width:100%;aspect-ratio:9/16;object-fit:cover;background:#000}
+.roliki .play{position:absolute;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:rgba(0,0,0,.5);pointer-events:none;transition:opacity .2s}
+.roliki .play::after{content:"";position:absolute;left:26px;top:20px;border-style:solid;border-width:12px 0 12px 19px;border-color:transparent transparent transparent #fff}
+.roliki .rol.idet .play{opacity:0}
+.roliki figcaption{font-size:15px;color:var(--soft);margin-top:8px}
+.roliki figcaption b{display:block;color:var(--tekst);font-size:17px}
+
+/* Подпись. Свод п.5: от Игоря, живое фото, настоящая эмблема. */
+.avtor{display:flex;align-items:center;gap:16px;margin-top:28px}
+.avtor img.f{width:84px;height:84px;border-radius:50%;object-fit:cover}
+.avtor img.e{width:44px;height:44px}
+.avtor b{display:block;font-size:19px}
+.avtor span{font-size:15px;color:var(--soft)}
+</style>
+</head>
+<body>
+
+<!-- 0. Первый экран: обращение и главная мысль (та же, что в превью) -->
+<section class="e0">
+ <img class="lico" src="i/lico.webp" alt="Олег Нуриханович Халилов">
+ <div class="in">
+  <img class="emb" src="i/bpr.png" alt="Бизнес по-русски">
+  <div class="tekst">
+   <div class="obr">Олег Нуриханович,</div>
+   <h1>Как санаторию, который лечит с 1972 года, получать гостей из коротких роликов, а не только из рекламы</h1>
+   <p class="pod">Лично Олегу Нурихановичу. Игорь Ильин, «Бизнес по-русски»</p>
+  </div>
+ </div>
+</section>
+
+<!-- 1. Где Вы сейчас -->
+<section>
+ <div class="in">
+  <p class="nom">Где Вы сейчас</p>
+  <h2>Лечите с 1972 года, а видео о Вас снимают <span class="akc">другие</span></h2>
+  <p>В Вашей группе ВКонтакте 77&nbsp;282 человека. Свои воды и грязи, лечение взрослых и детей от четырёх лет, больше двадцати врачей. Своего канала с видео нет, и гости снимают Вас сами: первый день дневника Натальи Мусиной из Нижне-Ивкино на YouTube посмотрели 25&nbsp;589 раз. Люди ищут, как у Вас лечат, и узнают это от гостьи, а не от врача.</p>
+  <p>Гостей из других регионов Вы зовёте рекламой в поиске Яндекса. Я сам попал на Ваш сайт по такому объявлению. Реклама приводит людей, пока за неё платят.</p>
+  <p class="pod">Числа сняты 10.11.2026: группа vk.com/nizhne_ivkino, YouTube, описание группы.</p>
+ </div>
+</section>
+
+<!-- 2. Цель и гипотеза -->
+<section>
+ <div class="in">
+  <p class="nom">Цель</p>
+  <h2>Больше путёвок из других регионов без роста расходов на рекламу</h2>
+  <p>Человек выбирает, куда поехать лечиться, и листает короткие ролики. ВКонтакте показывает клипы не только подписчикам группы, а всем, кому они интересны: у ВК Клипов 3 млрд просмотров в день. Он видит, как Ваш врач за минуту рассказывает, как проходит день в санатории, и в конце слышит, куда звонить.</p>
+  <p>Путёвка на «Лечебную» программу стоит от 71&nbsp;500&nbsp;₽ за 10 дней. Одна такая путёвка стоит в семь раз больше, чем десять роликов, которые я предлагаю ниже.</p>
+  <p>Как поймём, что вышло: под каждым роликом ссылка с меткой, а при брони вопрос «откуда о нас узнали». Через месяц видно, какие ролики привели звонки, и таких делаем больше.</p>
+  <p class="pod">ВК Клипы - vk.ru/press, 02.12.2025. Путёвка - Ваш прейскурант n-ivkino.ru/tseny: 7&nbsp;150&nbsp;₽ в сутки, одно место в двухместном номере.</p>
+ </div>
+</section>
+
+<!-- 2б. Instagram: главное возражение -->
+<section>
+ <div class="in">
+  <p class="nom">Про Instagram</p>
+  <h2>Instagram Вам <span class="akc">не нужен</span></h2>
+  <p>С 1 сентября 2025 года реклама в Instagram запрещена. Ролик, где врач рассказывает о санатории и зовёт бронировать, - это реклама, и отвечает за неё сам санаторий. Поэтому в Instagram я ролики не выкладываю, ссылок на него и его значка в роликах нет.</p>
+    <p>Ваши будущие гости и так во ВКонтакте: там Ваша группа на 77&nbsp;282 человека. Ролики идут в ВК Клипы, Rutube, Дзен и Одноклассники. YouTube и Telegram - только по Вашему слову.</p>
+    <p>Врача снимаем по закону о медицинской рекламе: предупреждение о противопоказаниях на экране весь ролик, никаких обещаний вылечить и историй «мне помогло». Гости рассказывают о природе, номерах и кухне.</p>
+    <p class="pod">Запрет - ч.&nbsp;10.7 ст.&nbsp;5 закона «О рекламе», действует с 01.09.2025. Предупреждение - ч.&nbsp;7 ст.&nbsp;24 того же закона.</p>
+ </div>
+</section>
+
+<!-- 3. Ролики-образцы -->
+<section>
+ <div class="in">
+  <p class="nom">Как это работает у нас</p>
+  <h2>Короткое видео смотрят чужие</h2>
+  <p>На YouTube-канале «Бизнес по-русски» 3&nbsp;920 подписчиков (10.11.2026). Эти два ролика посмотрели в десятки и сотни раз больше людей: их показали тем, кто о нас ещё не знал.</p>
+  <div class="roliki">
+   <figure><div class="rol"><video src="v/arhitektory.mp4" poster="v/arhitektory.jpg" playsinline preload="none"></video><span class="play"></span></div><figcaption><b>Как архитекторы хоронят ваши деньги?</b>2&nbsp;955&nbsp;661 просмотр · YouTube, 10.11.2026</figcaption></figure>
+   <figure><div class="rol"><video src="v/forel.mp4" poster="v/forel.jpg" playsinline preload="none"></video><span class="play"></span></div><figcaption><b>Целая мурманская форель на оптовом складе</b>213&nbsp;954 просмотра · YouTube, 10.11.2026</figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<!-- 4. Что предлагаю -->
+<section>
+ <div class="in">
+  <p class="nom">Что предлагаю</p>
+  <h2>Первый шаг: 10 роликов из Вашего видео</h2>
+  <div class="cena"><div class="ch">10&nbsp;000&nbsp;₽</div><p class="pod" style="margin:10px 0 0">10 готовых роликов за неделю: видео, обложка и подпись с призывом позвонить</p></div>
+  <p>Мне нужно одно Ваше видео, где говорит врач или гость: интервью, экскурсия, ответы на вопросы, хотя бы на 20 минут. Если такого нет, пришлю вопросы, и Ваш врач за час запишет ответы на телефон.</p>
+  <p>Через месяц смотрим на брони по меткам и договариваемся по справедливости, как идти дальше.</p>
+  <p>Чего не обещаю: число просмотров и броней. Обещаю ролики, в которых понятно, куда звонить, и честный счёт того, что они принесли.</p>
+ </div>
+</section>
+
+<!-- 5. Концовка: конкретная, с азартом (п.11), и подпись Игоря -->
+<section>
+ <div class="in">
+  <h2>Давайте созвонимся на 20 минут. Пришлите заранее любое видео с Вашим врачом, и на созвоне я покажу первый ролик из него</h2>
+  <div class="avtor">
+   <img class="f" src="i/igor.webp" alt="Игорь Ильин">
+   <div><b>Игорь Ильин</b><span>«Бизнес по-русски»</span></div>
+   <img class="e" src="i/bpr.png" alt="">
+  </div>
+ </div>
+</section>
+
+<script>
+document.querySelectorAll('.roliki .rol').forEach(function(r){
+  var v=r.querySelector('video');
+  r.addEventListener('click',function(){
+    if(v.paused){
+      document.querySelectorAll('.roliki video').forEach(function(o){ if(o!==v && !o.paused) o.pause(); });
+      v.play();
+    } else v.pause();
+  });
+  v.addEventListener('play',function(){ r.classList.add('idet'); });
+  v.addEventListener('pause',function(){ r.classList.remove('idet'); });
+  v.addEventListener('ended',function(){ r.classList.remove('idet'); v.load(); });
+});
+</script>
+</body>
+</html>
